@@ -2,7 +2,7 @@ package lagosscala
 
 import org.scalatest._
 
-class RestaurantBillingTestSpec extends FlatSpec with Matchers {
+class ServiceChargeSpec extends FlatSpec with Matchers {
 
   val firstPurchase = List("Cola", "Coffee", "Cheese Sandwish")
   val allDrinks = List("Cola", "Coffee", "Cola", "Coffee")
@@ -32,12 +32,12 @@ class RestaurantBillingTestSpec extends FlatSpec with Matchers {
     totalAfterServiceCharge shouldEqual totalPrice
   }
 
-  it should "return 10% of service charge in case there is FOOD" in {
+  it should "return 10% of service charge in case there is food" in {
     val (totalAfterServiceCharge, totalFoodOnly) = ServiceCharge.billWithCharge(foodPurchase)
     totalAfterServiceCharge shouldEqual 0.35 + totalPrice
   }
 
-  it should "return 20% of service charge in case there is hot FOOD" in {
+  it should "return 20% of service charge in case there is hot food" in {
     val (totalAfterServiceCharge, totalHotFoodOnly) = ServiceCharge.billWithCharge(hotFoodPurchase)
     totalAfterServiceCharge shouldEqual 1.10 + totalFoodOnly
   }

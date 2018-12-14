@@ -2,6 +2,6 @@ package lagosscala
 
 object ServiceCharge {
 
-  def billWithCharge() = ???
+  def billWithCharge(x : List[String]) :Double = ???
 
 }
