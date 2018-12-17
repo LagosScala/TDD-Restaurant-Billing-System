@@ -3,10 +3,10 @@ import Dependencies._
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
-      organization := "com.example",
+      organization := "com.lagosscala",
       scalaVersion := "2.12.7",
       version      := "0.1.0-SNAPSHOT"
     )),
-    name := "restaurant-billing-system",
+    name := "tdd-restuarant-billing-system",
     libraryDependencies += scalaTest % Test
   )
